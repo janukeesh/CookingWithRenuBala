@@ -1,0 +1,157 @@
+doctype html
+html
+  head
+    title Cooking With Renu Bala
+    meta(charset='utf-8', name='viewport', content='width=device-width, initial-scale=1.0')
+    style.
+      * {
+      box-sizing: border-box;
+      }
+      body{
+      margin:0px;
+      }
+      .header{
+      color: #3333cc;
+      font-family: 'Courgette',cursive;
+      text-shadow:1px 1px  #4d4d4d;
+      padding:10px;
+      margin:0px;
+      }
+      ul{
+      background-color:#000000;
+      overflow:hidden;
+      list-style-type:none;
+      height:40px;
+      margin:0;
+      }
+      li.shop{
+      float:right;
+      }
+      li{
+      float:left;
+      }
+      li a,span {
+      display:block;
+      margin:0;
+      padding:10px;
+      color:white;
+      text-decoration:none;
+      }
+      li a:hover,li span:hover{
+      background-color:#9966ff;
+      color:#000000;
+      }
+      .cusins_list,.ingredient_list {
+      display:none;
+      position:absolute;
+      border-bottom:2px solid black;
+      color:white;
+      background-color:black;
+      z-index:1;
+      }
+      .ingredient_list {
+      display:none;
+      position:absolute;
+      width:100px;
+      border-bottom:2px solid black;
+      color:white;
+      background-color:black;
+      }
+      .cusin:hover .cusins_list,.ingredient:hover .ingredient_list{
+      display:block;
+      }
+      .cusins_list a,.ingredient_list a{
+      display:block;
+      text-decoration:none;
+      border-bottom:2px solid white;
+      }
+      .content{
+      display:flex;
+      flex-wrap:wrap;
+      }
+      .side{
+      flex:15%;
+      padding:10px;
+      }
+      .main{
+      flex:70%;
+      height:1000px;
+      padding:10px;
+      }
+      iframe{
+      width:70%;
+      height:400px;
+      margin:10% 15% 0 15%;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0,.19);
+      border-radius:20px;
+      }
+      .steps{
+      margin:0 15% 0 15%;
+      background-color:#ffccee;
+    
+      }
+      .side_2{
+      flex:15%;
+      padding:10px;
+      }
+      .footer{
+      background-color:rgba(0,0,0,1);
+      padding:30px;
+      color:white;
+      font-size:15px;
+      }
+      @media screen and (max-width: 500px) {
+      .main{
+      height:700px;
+      }
+      }
+  body
+    // -----------------------------------------------header---------------------------------------------------------------------
+    .header
+      h2 Cooking With Renu Bala...
+    ul
+      li
+        a(href='file:///C:/Users/abc/Desktop/web.html') Home
+      // -----------------------------------------------firstlist--------------------------------------------------------------------
+      li.cusin
+        span Cusins
+        .cusins_list
+          a(href='#north-indian') North-Indian
+          a(href='#south-indian') South-Indian
+          a(href='#bakery-items') Bakery-Items
+          a(href='#sweets') Sweets
+          a(href='#food-preservation') Food-Preservation
+      // --------------------------------------------secondlist-----------------------------------------------------------------------
+      li.ingredient
+        span Ingredients
+        .ingredient_list
+          a(href='#potato') Potato
+          a(href='#cheese') Cheese
+          a(href='#maida') Maida
+          a(href='#milk') Milk
+      li
+        a(href='#Classes') Classes
+      li.shop
+        a(href='#Shop') Shop
+    // --------------------------------------------end of navigation-------------------------------------------------------------------
+    .content
+      .side
+      .main
+        .video
+          iframe(src='https://www.youtube.com/embed/Jk5tGg7MoHI')
+        h1(style='margin:0 15% 0 15%;')
+          i Rose Milk
+        .steps
+          h2 How To
+          h2
+          h4 Ingredients:
+          h4 Level of cooking:
+          h4 Taste:Sweet
+      // --------------------------end of main------------------------------------------------------------
+      .side_2
+    // ----------------------end of content-------------------------------------------------------------
+    .footer
+      p Contact Us
+      p Phone No:+918198800299
+      p 11A/39 near FCI godawn shivpuri mohalla
+      p  Dhuri,Punjab

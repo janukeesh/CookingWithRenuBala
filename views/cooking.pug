@@ -1,0 +1,330 @@
+doctype html
+html
+  head
+    link(href='https://fonts.googleapis.com/css?family=Courgette', rel='stylesheet')
+    link(href='https://fonts.googleapis.com/css?family=Lemon', rel='stylesheet')
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
+    title Cooking With Renu Bala
+    meta(charset='utf-8', name='viewport', content='width=device-width, initial-scale=1.0')
+    style.
+      * {
+      box-sizing: border-box;
+      }
+      body{
+      margin:0px;
+      }
+      .header{
+      color: #3333cc;
+      font-family: 'Courgette';
+      text-shadow:3px 3px  #4d4d4d;
+      padding:10px;
+      margin:0px;
+      }
+      ul{
+      background-color:#000000;
+      list-style-type:none;
+      height:45px;
+      margin:0;
+      }
+      li.shop{
+      float:right;
+      }
+      li{
+      float:left;
+      }
+      li a,span {
+      display:inline-block;
+      padding:12px;
+      text-align:center;
+      color:white;
+      font-size:18px;
+      text-decoration:none;
+      transition: all 0.3s ease;
+      }
+      li a:hover,li span:hover{
+      background-color:#9966ff;
+      color:#000000;
+      }
+      .cusins_list,.ingredient_list {
+      display:none;
+      position:absolute;
+      border-bottom:2px solid black;
+      color:white;
+      background-color:black;
+      z-index:1;
+      }
+      .cusin:hover .cusins_list,.ingredient:hover .ingredient_list{
+      display:block;
+      }
+      .cusins_list a,.ingredient_list a{
+      display:block;
+      text-decoration:none;
+      border-bottom:2px solid white;
+      }
+      .content{
+      display:flex;
+      flex-wrap:wrap;
+      }
+      .side{
+      flex:15%;
+      padding:10px;
+      }
+      .main{
+      flex:70%;
+      display:flex;
+      flex-wrap:wrap;
+      flex-direction:column;
+      height:1200px;
+      padding:10px;
+      }
+      .drinks{
+      width:100%;
+      margin:2px;
+      height:20%;
+      border-radius:10px;
+      background-color:#ffcce6;
+      display:flex;
+      flex-wrap:wrap;
+      flex-direction:row;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0,.19);
+      position:relative;
+      }
+      .gallery{
+      flex-grow:1;
+      width:25%;
+      margin:2px;
+      }
+      .gallery img{
+      margin:5% 3% 0 2%;
+      border:1px solid #999999;
+      border-radius:10px;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0,.19);
+      }
+      div.text{
+      font-size:96%;
+      padding-top:10px;
+      text-align:center;
+      font-family: 'Lemon';
+      max-width:100%;
+      word-wrap: break-word;
+      }
+      .prev, .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 16px;
+      margin-top: -22px;
+      color:white;
+      font-weight: bold;
+      font-size: 20px;
+      transition: 0.6s ease;
+      border-radius: 8px 8px 8px 8px;
+      user-select: none;
+      }
+      .next {
+      right:0;
+      }
+      .prev:hover, .next:hover {
+      background-color: rgba(0,0,0,0.8);
+      }
+      .festive{
+      width:100%;
+      margin:2px;
+      height:20%;
+      border-radius:10px;
+      display:flex;
+      flex-direction:row;
+      background-color: #ffff80;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0,.19);
+      position:relative;
+      }
+      .most_popular{
+      width:100%;
+      margin:2px;
+      height:20%;
+      border-radius:10px;
+      display:flex;
+      flex-direction:row;
+      background-color: #d9b38c;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0,.19);
+      position:relative;
+      }
+      .side_2{
+      flex:15%;
+      padding:10px;
+      }
+      .footer{
+      background-color:rgba(0,0,0,1);
+      padding:30px;
+      color:white;
+      font-size:15px;
+      }
+      @media screen and (max-width: 500px) {
+      .main{
+      height:3000px;
+      }
+      .drinks,.festive,.most_popular{
+      flex-direction:column;
+      height:25%;
+      }
+      .gallery{
+      width:100%;
+      }
+      .gallery img{
+      margin:5px 5px 5px 5px;
+      }
+      }
+  body
+    // -----------------------------------------------header---------------------------------------------------------------------
+    .header
+      h1 Cooking With Renu Bala...
+    ul
+      li
+        a(href='#home', style='font-size:30px padding-bottom:14px;')
+          i.fa.fa-home
+      // -----------------------------------------------firstlist--------------------------------------------------------------------
+      li.cusin
+        span Cusins
+        .cusins_list
+          a(href='#north-indian') North-Indian
+          a(href='#south-indian') South-Indian
+          a(href='#bakery-items') Bakery-Items
+          a(href='#sweets') Sweets
+          a(href='#food-preservation') Food-Preservation
+      // --------------------------------------------secondlist-----------------------------------------------------------------------
+      li.ingredient
+        span Ingredients
+        .ingredient_list
+          a(href='#potato') Potato
+          a(href='#cheese') Cheese
+          a(href='#maida') Maida
+          a(href='#milk') Milk
+      li
+        a(href='/Classes') Classes
+      li.shop
+        a(href='#Shop') Shop
+    // --------------------------------------------end of navigation-------------------------------------------------------------------
+    .content
+      .side
+      .main
+        h1
+          i Summer Drinks
+        .drinks
+          .gallery
+            a(target='_blank', href='Rosemilk')
+              img(src='rosemilk.jpg', style='width:95%; height:auto', alt='Rose Milk')
+            .text
+              | Rose Milk
+          .gallery
+            a(target='_blank', href='#')
+              img(src='mintdrink.jpg', style='width:95% ;height:auto;', alt='Mint Drink')
+            .text
+              | Mint Drink
+          .gallery
+            a(target='_blank', href='#')
+              img(src='amlapanna.jpg', style='width:95% ;height:auto;', alt='Amla Panna')
+            .text
+              | Amla Panna
+          a.prev ❮
+          a.next ❯
+        // -----------------------------------------------------------end of drinks----------------------------------------------------
+        h1
+          i Festive Season
+        .festive
+          .gallery
+            a(target='_blank', href='#')
+              img(src='moonghalwa.jpg', style='width:95% ;height:auto;', alt='Moong Halwa')
+            .text
+              | Moong Halwa
+          .gallery
+            a(target='_blank', href='#')
+              img(src='besanladoo.jpg', style='width:95% ;height:auto;', alt='Besan Ladoo')
+            .text
+              | Besan Ladoo
+          .gallery
+            a(target='_blank', href='#')
+              img(src='jalebi.jpg', style='width:95% ;height:auto;', alt='Jalebi')
+            .text
+              | Jalebi
+          .gallery
+            a(target='_blank', href='#')
+              img(src='meethechawal.jpg', style='width:95% ;height:auto;', alt='Meethe Chawal')
+            .text
+              | Meethe Chawal
+          a.prev(onclick='plusSlides(-1)') ❮
+          a.next(onclick='plusSlides(1)') ❯
+        h1
+          i Our Most Trendy Recipies
+        .most_popular
+          .gallery
+            a(target='_blank', href='ChillyPickle')
+              img(src='mirchachar.jpg', style='width:95% ;height:auto;', alt='greencjillyachar')
+            .text
+              | Green chilly Pickle
+          .gallery
+            a(target='_blank', href='#')
+              img(src='gulabjamun.jpg', style='width:95% ;height:auto;', alt='gulabjamun')
+            .text
+              | Gulab Jamun
+          .gallery
+            a(target='_blank', href='#')
+              img(src='gajarmurabba.jpg', style='width:95% ;height:auto;', alt='carrotmurabba')
+            .text
+              | Carrot Murabba
+          .gallery
+            a(target='_blank', href='#')
+              img(src='matar.jpg', style='width:95% ;height:auto;', alt='matar')
+            .text
+              | 
+          a.prev(onclick='plusSlides_popular(-1)') ❮
+          a.next(onclick='plusSlides_popular(1)') ❯
+      // --------------------------end of main------------------------------------------------------------
+      .side_2
+    // ----------------------end of content-------------------------------------------------------------
+    .footer
+      p Contact Us
+      p Phone No:+918198800299
+      p 11A/39 near FCI godawn shivpuri mohalla
+      p  Dhuri,Punjab
+    script.
+      var slideIndex = 1;
+      var slideIndex_popular = 1;
+      showSlides(slideIndex);
+      showSlides_popular(slideIndex);
+      function plusSlides_popular(n) {
+      showSlides_popular(slideIndex += n);
+      }
+      function plusSlides(n) {
+      showSlides(slideIndex += n);
+      }
+      function showSlides(n) {
+      var i,j,x,y;
+      if(n>=3)
+      slideIndex=1;
+      if(n<=0)
+      slideIndex=2;
+      x=document.getElementsByClassName("festive");
+      y=x[0].getElementsByClassName("gallery");
+      for (i = 0; i < y.length; i++) {
+      y[i].style.display = "none";
+      }
+      for (j= slideIndex-1; j< slideIndex+2 ; j++) {
+      y[j].style.display = "block";
+      }
+      }
+      function showSlides_popular(n) {
+      var i,j,x,y;
+      if(n>=3)
+      slideIndex=1;
+      if(n<=0)
+      slideIndex=2;
+      x=document.getElementsByClassName("most_popular");
+      y=x[0].getElementsByClassName("gallery");
+      for (i = 0; i < y.length; i++) {
+      y[i].style.display = "none";
+      }
+      for (j= slideIndex-1; j< slideIndex+2 ; j++) {
+      y[j].style.display = "block";
+      }
+      }
